@@ -1,7 +1,18 @@
+import logo from "../../assets/img/logo.svg";
+
 export const Header = () => {
     return (
-        <div>
-            <h1>Header</h1>
-        </div>
+        <>
+            <header className="header">
+                <div className="header__container">
+                    <div className="header__logo">
+                        <img src={logo} alt="Gallery logo" />
+                    </div>
+                    <div className="searchbar__container">
+                        <p>Searchbar</p>
+                    </div>
+                </div>
+            </header>
+        </>
     );
 };
