@@ -1,5 +1,10 @@
 import { AppActionType } from "../models/appaction";
 
+const initialState = {
+    page: 1,
+    searchquery: "",
+};
+
 export const reducer = (state = initialState, action: AppActionType) => {
     switch (action.type) {
         case "SET_PAGE":
