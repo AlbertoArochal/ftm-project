@@ -33,5 +33,3 @@ export const useEndscreen = () => {
 
     return atEnd;
 };
-
-export default useEndscreen;
