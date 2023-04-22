@@ -10,7 +10,6 @@ export const Header = () => {
                         <img src={logo} alt="Gallery logo" />
                     </div>
                     <div className="searchbar__container">
-                        <p>Searchbar</p>
                         <SearchBar />
                     </div>
                 </div>
