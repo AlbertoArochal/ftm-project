@@ -1,11 +1,7 @@
 import { AppActionType } from "../models/appaction";
+import { initialState } from "../context/appcontext";
 
-const initialState = {
-    page: 1,
-    searchquery: "",
-};
-
-export const reducer = (state = initialState, action: AppActionType) => {
+export const Appreducer = (state = initialState, action: AppActionType) => {
     switch (action.type) {
         case "SET_PAGE":
             return {
