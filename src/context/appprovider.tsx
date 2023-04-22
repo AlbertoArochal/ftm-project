@@ -1,10 +1,18 @@
 import { AppContext } from "./appcontext";
-import { ReactNode } from "react";
+import { Appreducer } from "../reducer/appreducer";
+import { initialState } from "./appcontext";
+import { ReactNode, useReducer } from "react";
 
-const BASE_URL = "http://localhost:3100/";
 export const AppProvider = ({ children }: { children: ReactNode }) => {
+    const [state, dispatch] = useReducer(Appreducer, initialState);
+
+    const contextValue = {
+        ...state,
+        dispatch,
+    };
+
     return (
-        <AppContext.Provider value={{ BASE_URL }}>
+        <AppContext.Provider value={contextValue}>
             {children}
         </AppContext.Provider>
     );
