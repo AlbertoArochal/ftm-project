@@ -8,7 +8,7 @@ export type ImageListProps = {
 };
 
 export const ImageList = ({ page = 1, searchQuery = "" }: ImageListProps) => {
-    const { useGetImages } = useGalleryApi();
+    const { useGetImages, useGetImagesBySearch } = useGalleryApi();
 
     useEffect(() => {
         if (!page && !searchQuery) {
@@ -22,10 +22,10 @@ export const ImageList = ({ page = 1, searchQuery = "" }: ImageListProps) => {
         }
 
         if (searchQuery) {
-            useGetImages(1, searchQuery);
+            useGetImagesBySearch(searchQuery);
             return;
         }
-    }, [page, searchQuery, useGetImages]);
+    }, [page, searchQuery, useGetImages, useGetImagesBySearch]);
 
     return (
         <div>

@@ -14,9 +14,11 @@ export type Dispatch = (action: Action) => void;
 export type GalleryContextType = {
     images: ImageType[];
     setImages: (images: ImageType[]) => void;
+    clearImages: () => void;
 };
 
 export const GalleryContext = createContext<GalleryContextType>({
     images: [],
     setImages: () => {},
+    clearImages: () => {},
 });

@@ -4,20 +4,21 @@ import { GalleryApi } from "../services/galleryapi";
 
 export const useGalleryApi = () => {
     const BASE_URL = "http://localhost:3100";
-    const { setImages } = useContext(GalleryContext);
+    const { setImages, clearImages } = useContext(GalleryContext);
     const galleryApi = new GalleryApi(BASE_URL);
     const useGetImages = useCallback(
         async (page: number = 1, search: string = "") => {
-            if (search) {
-                const images = await galleryApi.getImagesBySearch(search);
-                setImages(images);
-                return;
-            }
             const images = await galleryApi.getImagesByPage(page);
             setImages(images);
         },
         []
     );
+
+    const useGetImagesBySearch = useCallback(async (search: string) => {
+        const images = await galleryApi.getImagesBySearch(search);
+        clearImages();
+        setImages(images);
+    }, []);
 
     const useLikeImage = (id: number) => {
         let isLiked = false;
@@ -36,5 +37,5 @@ export const useGalleryApi = () => {
         return isLiked;
     };
 
-    return { useGetImages, useLikeImage };
+    return { useGetImages, useLikeImage, useGetImagesBySearch };
 };
