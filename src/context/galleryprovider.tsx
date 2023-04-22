@@ -15,9 +15,12 @@ export const GalleryProvider = ({ children }: GalleryProviderProps) => {
     const setImages = (images: ImageType[]) =>
         dispatch({ type: "ADD_IMAGES", payload: images });
 
+    const clearImages = () => dispatch({ type: "CLEAR_IMAGES" });
+
     const contextValue: GalleryContextType = {
         images: state.images,
         setImages,
+        clearImages,
     };
 
     return (

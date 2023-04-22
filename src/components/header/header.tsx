@@ -1,4 +1,5 @@
 import logo from "../../assets/img/logo.svg";
+import { SearchBar } from "../../searchbar/searchbar";
 
 export const Header = () => {
     return (
@@ -10,6 +11,7 @@ export const Header = () => {
                     </div>
                     <div className="searchbar__container">
                         <p>Searchbar</p>
+                        <SearchBar />
                     </div>
                 </div>
             </header>
