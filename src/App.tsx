@@ -1,12 +1,12 @@
 import { Layout } from "./components/layout/layout";
-import { AppProvider } from "./context/appprovider";
+import { GalleryProvider } from "./context/galleryprovider";
 
 function App() {
     return (
         <>
-            <AppProvider>
+            <GalleryProvider>
                 <Layout />
-            </AppProvider>
+            </GalleryProvider>
         </>
     );
 }
