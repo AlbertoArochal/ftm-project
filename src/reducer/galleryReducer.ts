@@ -1,5 +1,9 @@
 import { Action, State } from "../context/gallerycontext";
 
+export const initialState: State = {
+    images: [],
+};
+
 export function galleryReducer(state: State, action: Action): State {
     switch (action.type) {
         case "ADD_IMAGES":
