@@ -1,6 +1,9 @@
-import { useContext, useState } from "react";
+// ImagesFetcher.tsx
+import { useContext } from "react";
 import { GalleryContext } from "../../context/gallerycontext";
 import { ImageType } from "../../models/imagetype";
+import { v4 as uuid } from "uuid";
+import { Card } from "../card/card";
 
 export const ImagesFetcher = () => {
     const { images } = useContext(GalleryContext);
@@ -13,16 +16,7 @@ export const ImagesFetcher = () => {
                 <div className="Gallery_container">
                     <div className="Gallery_images">
                         {images.map((image: ImageType) => (
-                            <div className="Gallery_image" key={image.id}>
-                                <img
-                                    src={image.main_attachment.small}
-                                    alt={image.title}
-                                />
-                                <div className="image__details">
-                                    <h3>{image.title}</h3>
-                                    <p> Likes: {image.likes_count}</p>
-                                </div>
-                            </div>
+                            <Card key={uuid()} image={image} />
                         ))}
                     </div>
                 </div>

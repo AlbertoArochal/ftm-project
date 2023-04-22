@@ -21,7 +21,8 @@
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "sass": "^1.62.0",
-        "ts-jest": "^29.1.0"
+        "ts-jest": "^29.1.0",
+        "uuidv4": "^6.2.13"
     },
     "devDependencies": {
         "@mocks-server/main": "^2.4.0",

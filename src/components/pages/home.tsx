@@ -23,7 +23,6 @@ export const HomePage = () => {
 
     return (
         <div>
-            <h1>Home Page</h1>
             <ImageList page={page} searchQuery={search} />
 
             <div id="endscreen">
