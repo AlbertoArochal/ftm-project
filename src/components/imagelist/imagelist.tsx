@@ -1,15 +1,13 @@
-import { useContext, useEffect } from "react";
-import { GalleryContext } from "../../context/gallerycontext";
+import { useEffect } from "react";
 import { useGalleryApi } from "../../hooks/usegalleryapi";
 import { ImagesFetcher } from "../imagesfetcher/imagesfetcher";
 
-type ImageListProps = {
+export type ImageListProps = {
     page?: number;
     searchQuery?: string;
 };
 
 export const ImageList = ({ page = 1, searchQuery = "" }: ImageListProps) => {
-    const { images, setImages } = useContext(GalleryContext);
     const { useGetImages } = useGalleryApi();
 
     useEffect(() => {
