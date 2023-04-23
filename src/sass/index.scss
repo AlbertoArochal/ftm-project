@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Josefin+Sans:wght@100;200;400&family=Open+Sans:wght@300;400&family=PT+Serif:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.gallery__image {
+    width: 24.25rem;
+    height: 32.5rem;
+    background-color: #f6f6f6;
+    border: 1px solid #e2e2e2;
+    margin: 2rem auto;
+    .image__main {
+        width: 24.25rem;
+        object-fit: cover;
+    }
+    .image__details {
+        height: 6.25rem;
+        width: 24.25rem;
+        background-color: #fff;
+        display: flex;
+    }
+    .image__icons {
+        height: 3.1rem;
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+        .image__button {
+            width: 50%;
+            height: 100%;
+            background-color: #fff;
+            border: 1px solid #e2e2e2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: #000;
+                line-height: 10px;
+                color: #b6b6b4;
+                letter-spacing: 2px;
+                text-align: center;
+                padding: 0.3rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                margin-right: 18px;
+            }
+
+            img {
+                width: 2.2rem;
+                height: 2.2rem;
+                border-radius: 100%;
+                flex-shrink: 0;
+            }
+        }
+        .image__redo {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+    }
+}
