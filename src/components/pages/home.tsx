@@ -24,10 +24,6 @@ export const HomePage = () => {
     return (
         <div>
             <ImageList page={page} searchQuery={search} />
-
-            <div id="endscreen">
-                <h1>End of the page</h1>
-            </div>
         </div>
     );
 };
