@@ -13,13 +13,11 @@ export const ImagesFetcher = () => {
             {images.length === 0 ? (
                 <p>This Gallery is empty</p>
             ) : (
-                <div className="Gallery_container">
-                    <div className="Gallery_images">
-                        {images.map((image: ImageType) => (
-                            <Card key={uuid()} image={image} />
-                        ))}
-                    </div>
-                </div>
+                <>
+                    {images.map((image: ImageType) => (
+                        <Card key={uuid()} image={image} />
+                    ))}
+                </>
             )}
         </>
     );

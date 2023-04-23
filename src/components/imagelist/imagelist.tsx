@@ -28,8 +28,7 @@ export const ImageList = ({ page = 1, searchQuery = "" }: ImageListProps) => {
     }, [page, searchQuery, useGetImages, useGetImagesBySearch]);
 
     return (
-        <div>
-            <h1>image list</h1>
+        <div className="image__list">
             <ImagesFetcher />
         </div>
     );

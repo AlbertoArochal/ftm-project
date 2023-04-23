@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useGalleryApi } from "../hooks/usegalleryapi";
+import { useGalleryApi } from "../../hooks/usegalleryapi";
 
 export const SearchBar = () => {
     const { useGetImagesBySearch } = useGalleryApi();
@@ -14,13 +14,11 @@ export const SearchBar = () => {
     };
 
     return (
-        <div>
-            <input
-                type="text"
-                value={search}
-                onChange={handleChange}
-                placeholder="You are looking for something?"
-            />
-        </div>
+        <input
+            type="text"
+            value={search}
+            onChange={handleChange}
+            placeholder="You are looking for something?"
+        />
     );
 };
