@@ -1,5 +1,5 @@
 import logo from "../../assets/img/logo.svg";
-import { SearchBar } from "../../searchbar/searchbar";
+import { SearchBar } from "../searchbar/searchbar";
 
 export const Header = () => {
     return (

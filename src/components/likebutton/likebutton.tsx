@@ -48,7 +48,10 @@ export const LikeButton = ({
             disabled={isLoading}
             className={buttonClass}
         >
-            <p>0{String(likes).padStart(2, "0")}</p>{" "}
+            <div className="button__counter">
+                <p>0{String(likes).padStart(2, "0")}</p>{" "}
+            </div>
+
             <img src={thumbup} alt="thumb up icon" />
         </button>
     );

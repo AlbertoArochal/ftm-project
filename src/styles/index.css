@@ -24,6 +24,25 @@ body {
   width: 24.25rem;
   background-color: #fff;
   display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.gallery__image .image__details .image__author {
+  font-family: "PT Serif", serif;
+  font-weight: 300;
+  font-size: 18px;
+  filter: drop-shadow(0.5px 0.866px 0px #ffffff);
+}
+.gallery__image .image__details .image__author span {
+  color: #c2c2bd;
+}
+.gallery__image .image__details .image__name {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 200;
+  font-size: 1.6rem;
+  text-transform: uppercase;
 }
 .gallery__image .image__icons {
   height: 3.1rem;
@@ -39,6 +58,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .gallery__image .image__icons .image__button p {
   font-family: "Josefin Sans", sans-serif;
@@ -53,7 +73,6 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: 18px;
 }
 .gallery__image .image__icons .image__button img {
   width: 2.2rem;
@@ -61,10 +80,45 @@ body {
   border-radius: 100%;
   flex-shrink: 0;
 }
+.gallery__image .image__icons .image__thumbup--liked img {
+  filter: invert(87%) sepia(11%) saturate(1390%) hue-rotate(98deg) brightness(240%) contrast(94%);
+}
 .gallery__image .image__icons .image__redo {
   align-items: center;
   justify-content: center;
   display: flex;
+}
+.gallery__image .button__counter {
+  min-width: 5rem;
+}
+
+.header {
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.header .header__container {
+  background-color: white;
+  width: 93%;
+  height: 11rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .searchbar__container {
+  border: 2px solid #f6f6f6;
+  width: 14rem;
+  display: flex;
+  background-color: #f6f6f6;
+  justify-content: center;
+  border-radius: 1rem;
+}
+.header .searchbar__container input {
+  width: 85%;
+  border: none;
+  background-color: #f6f6f6;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*# sourceMappingURL=index.css.map */

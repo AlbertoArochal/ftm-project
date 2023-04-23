@@ -27,7 +27,9 @@ export const Card = ({ image }: CardProps) => {
                     likesCount={image.likes_count}
                 />
                 <div className="image__button image__redo">
-                    <p>000</p>
+                    <div className="button__counter">
+                        <p>000</p>
+                    </div>
                     <img src={redo} alt="redo icon" />
                 </div>
             </div>

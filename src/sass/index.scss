@@ -24,6 +24,25 @@ body {
         width: 24.25rem;
         background-color: #fff;
         display: flex;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .image__author {
+            font-family: "PT Serif", serif;
+            font-weight: 300;
+            font-size: 18px;
+            filter: drop-shadow(0.5px 0.866px 0px #ffffff);
+            span {
+                color: #c2c2bd;
+            }
+        }
+        .image__name {
+            font-family: "Josefin Sans", sans-serif;
+            font-weight: 200;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+        }
     }
     .image__icons {
         height: 3.1rem;
@@ -38,6 +57,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
 
             p {
                 font-family: "Josefin Sans", sans-serif;
@@ -52,7 +72,6 @@ body {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                margin-right: 18px;
             }
 
             img {
@@ -62,10 +81,48 @@ body {
                 flex-shrink: 0;
             }
         }
+        .image__thumbup--liked {
+            img {
+                filter: invert(87%) sepia(11%) saturate(1390%) hue-rotate(98deg)
+                    brightness(240%) contrast(94%);
+            }
+        }
         .image__redo {
             align-items: center;
             justify-content: center;
             display: flex;
+        }
+    }
+    .button__counter {
+        min-width: 5rem;
+    }
+}
+.header {
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    .header__container {
+        background-color: white;
+        width: 93%;
+        height: 11rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .searchbar__container {
+        border: 2px solid #f6f6f6;
+        width: 14rem;
+        display: flex;
+        background-color: #f6f6f6;
+        justify-content: center;
+        border-radius: 1rem;
+
+        input {
+            width: 85%;
+            border: none;
+            background-color: #f6f6f6;
+            font-family: Arial, Helvetica, sans-serif;
         }
     }
 }
