@@ -1,4 +1,4 @@
-import { useContext, useCallback, useEffect } from "react";
+import { useContext, useCallback } from "react";
 import { GalleryContext } from "../context/gallerycontext";
 import { GalleryApi } from "../services/galleryapi";
 
@@ -21,20 +21,12 @@ export const useGalleryApi = () => {
     }, []);
 
     const useLikeImage = (id: number) => {
-        let isLiked = false;
-
-        useEffect(() => {
-            const like = async () => {
-                const data = await galleryApi.likeImage(id);
-                if (Object.keys(data).length > 0) {
-                    isLiked = true;
-                }
-            };
-
-            like();
+        const likeImage = useCallback(async () => {
+            const result = await galleryApi.likeImage(id);
+            return result;
         }, [id]);
 
-        return isLiked;
+        return likeImage;
     };
 
     return { useGetImages, useLikeImage, useGetImagesBySearch };

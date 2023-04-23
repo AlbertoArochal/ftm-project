@@ -1,5 +1,5 @@
 import { ImageType } from "../../models/imagetype";
-import thumbup from "../../assets/img/thumbup.svg";
+import { LikeButton } from "../likebutton/likebutton";
 import redo from "../../assets/img/redo.svg";
 
 interface CardProps {
@@ -17,10 +17,7 @@ export const Card = ({ image }: CardProps) => {
                 </p>
             </div>
             <div className="image__icons">
-                <div className="image__thumbup">
-                    <img src={thumbup} alt="thumb up icon" />
-                    <p>00{image.likes_count}</p>
-                </div>
+                <LikeButton imageId={image.id} initialIsLiked={image.liked} />
                 <div className="image__redo">
                     <img src={redo} alt="redo icon" />
                     <p>000</p>

@@ -20,17 +20,14 @@ export class GalleryApi {
         const images = await response.json();
         return images;
     }
-    async likeImage(id: number): Promise<ImageType> {
+    async likeImage(id: number): Promise<boolean> {
         const response = await fetch(`${this.BASE_URL}/images/${id}/likes`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
         });
-        if (response.status === 404) {
-            return {} as ImageType;
-        }
-        const data = await response.json();
-        return data;
+
+        return response.status === 204;
     }
 }
