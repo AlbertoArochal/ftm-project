@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for testmocks/imagesmock.ts</title>
+    <title>Code coverage report for components/card/card.tsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../prettify.css" />
-    <link rel="stylesheet" href="../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">testmocks</a> imagesmock.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">components/card</a> card.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>0/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
@@ -117,18 +117,16 @@
 <a name='L52'></a><a href='#L52'>52</a>
 <a name='L53'></a><a href='#L53'>53</a>
 <a name='L54'></a><a href='#L54'>54</a>
-<a name='L55'></a><a href='#L55'>55</a>
-<a name='L56'></a><a href='#L56'>56</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L55'></a><a href='#L55'>55</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -173,61 +171,60 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ImageType } from "../models/imagetype";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ImageType } from "../../models/imagetype";
+import { LikeButton } from "../likebutton/likebutton";
+import redo from "../../assets/img/redo_grey.svg";
 &nbsp;
-export const ImagesMock: ImageType[] = [
-    {
-        type: "image",
-        id: 1,
-        title: "Image 1",
-        author: "Author 1",
-        created_at: "2020-01-01",
-        main_attachment: {
-            big: "https://picsum.photos/200/300",
-            small: "https://picsum.photos/200/300",
-        },
-        likes_count: 1,
-        liked: false,
-        links: [
-            {
-                rel: "self",
-                uri: "https://picsum.photos/200/300",
-                methods: "GET",
-            },
-            {
-                rel: "like",
-                uri: "https://picsum.photos/200/300",
-                methods: "POST",
-            },
-        ],
-    },
+interface CardProps {
+    image: ImageType;
+}
 &nbsp;
-    {
-        type: "image",
-        id: 2,
-        title: "Image 2",
-        author: "Author 2",
-        created_at: "2020-01-01",
-        main_attachment: {
-            big: "https://picsum.photos/200/300",
-            small: "https://picsum.photos/200/300",
-        },
-        likes_count: 1,
-        liked: false,
-        links: [
-            {
-                rel: "self",
-                uri: "https://picsum.photos/200/300",
-                methods: "GET",
-            },
-            {
-                rel: "like",
-                uri: "https://picsum.photos/200/300",
-                methods: "POST",
-            },
-        ],
-    },
-];
+export const Card = <span class="fstat-no" title="function not covered" >({</span> image }: CardProps) =&gt; {
+<span class="cstat-no" title="statement not covered" >    return (</span>
+        &lt;div className="gallery__image"&gt;
+            &lt;div className="image__container"&gt;
+                &lt;img
+                    className="image__main"
+                    src={image.main_attachment.small}
+                    alt={image.title}
+                /&gt;
+                &lt;div className="laptop image__icons--laptop"&gt;
+                    &lt;LikeButton
+                        imageId={image.id}
+                        initialIsLiked={image.liked}
+                        likesCount={image.likes_count}
+                    /&gt;
+                    &lt;div className="image__button--laptop image__redo--laptop"&gt;
+                        &lt;div className="button__counter--laptop"&gt;
+                            &lt;p&gt;000&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;img src={redo} alt="redo icon" /&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+&nbsp;
+            &lt;div className="image__details"&gt;
+                &lt;h3 className="image__name"&gt;{image.title}&lt;/h3&gt;
+                &lt;p className="image__author"&gt;
+                    &lt;span&gt;by&lt;/span&gt; {image.author}
+                &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div className="mobile image__icons"&gt;
+                &lt;LikeButton
+                    imageId={image.id}
+                    initialIsLiked={image.liked}
+                    likesCount={image.likes_count}
+                /&gt;
+                &lt;div className="image__button image__redo"&gt;
+                    &lt;div className="button__counter"&gt;
+                        &lt;p&gt;000&lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;img src={redo} alt="redo icon" /&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    );
+};
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -237,14 +234,14 @@ export const ImagesMock: ImageType[] = [
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
                 at 2023-04-24T18:51:49.124Z
             </div>
-        <script src="../prettify.js"></script>
+        <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../sorter.js"></script>
-        <script src="../block-navigation.js"></script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
     </body>
 </html>
     

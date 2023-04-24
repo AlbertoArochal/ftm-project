@@ -18,6 +18,7 @@ export const SearchBar = () => {
             type="text"
             value={search}
             onChange={handleChange}
+            data-testid="searchbar"
             placeholder="You are looking for something?"
         />
     );

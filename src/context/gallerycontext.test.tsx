@@ -30,6 +30,7 @@ describe("GalleryContext", () => {
                     value={{
                         images: ImagesMock,
                         setImages: () => {},
+                        clearImages: () => {},
                     }}
                 >
                     {children}
@@ -48,6 +49,7 @@ describe("GalleryContext", () => {
                     value={{
                         images: ImagesMock,
                         setImages: () => {},
+                        clearImages: () => {},
                     }}
                 >
                     {children}
@@ -55,7 +57,6 @@ describe("GalleryContext", () => {
             ),
         });
         const imageCountElement = getByTestId("image-count");
-        const clearImagesButton = getByText("Clear images");
 
         expect(imageCountElement.textContent).toBe("2");
     });
