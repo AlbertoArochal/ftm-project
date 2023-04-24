@@ -1,8 +1,7 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { ImageList, ImageListProps } from "./imagelist";
 import { useGalleryApi } from "../../hooks/usegalleryapi";
 
-// Mocks
 jest.mock("../../hooks/usegalleryapi");
 
 const useGetImagesMock = jest.fn();

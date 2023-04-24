@@ -43,7 +43,11 @@ export const LikeButton = ({
         : "image__button image__thumbup";
 
     return (
-        <div onClick={handleLike} className={buttonClass}>
+        <div
+            onClick={handleLike}
+            className={buttonClass}
+            data-testid="like-button"
+        >
             <div className="button__counter">
                 <p>0{String(likes).padStart(2, "0")}</p>{" "}
             </div>

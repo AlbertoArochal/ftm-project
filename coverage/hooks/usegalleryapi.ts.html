@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for context/gallerycontext.tsx</title>
+    <title>Code coverage report for hooks/usegalleryapi.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">context</a> gallerycontext.tsx</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">hooks</a> usegalleryapi.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">80.95% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>17/21</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
-                <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
-                <span class="quiet">Lines</span>
                 <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">60% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>3/5</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">80% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>16/20</span>
             </div>
         
             
@@ -87,54 +87,81 @@
 <a name='L22'></a><a href='#L22'>22</a>
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
-<a name='L25'></a><a href='#L25'>25</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">7x</span>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { createContext } from "react";
-import { ImageType } from "../models/imagetype";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useContext, useCallback } from "react";
+import { GalleryContext } from "../context/gallerycontext";
+import { GalleryApi } from "../services/galleryapi";
 &nbsp;
-export type State = {
-    images: ImageType[];
+export const useGalleryApi = () =&gt; {
+    const BASE_URL = "http://localhost:3100";
+    const { setImages, clearImages } = useContext(GalleryContext);
+    const galleryApi = new GalleryApi(BASE_URL);
+    const useGetImages = useCallback(
+        async (page: number = 1, search: string = "") =&gt; {
+            const images = await galleryApi.getImagesByPage(page);
+            setImages(images);
+        },
+        []
+    );
+&nbsp;
+    const useGetImagesBySearch = useCallback(async (search: string) =&gt; {
+        const images = await galleryApi.getImagesBySearch(search);
+        clearImages();
+        setImages(images);
+    }, []);
+&nbsp;
+    const useLikeImage = <span class="fstat-no" title="function not covered" >(i</span>d: number) =&gt; {
+        const likeImage = <span class="cstat-no" title="statement not covered" >useCallback(<span class="fstat-no" title="function not covered" >async </span>() =&gt; {</span>
+            const result = <span class="cstat-no" title="statement not covered" >await galleryApi.likeImage(id);</span>
+<span class="cstat-no" title="statement not covered" >            return result;</span>
+        }, [id]);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return likeImage;</span>
+    };
+&nbsp;
+    return { useGetImages, useLikeImage, useGetImagesBySearch };
 };
-&nbsp;
-export type Action =
-    | { type: "ADD_IMAGES"; payload: ImageType[] }
-    | { type: "CLEAR_IMAGES" };
-&nbsp;
-export type Dispatch = (action: Action) =&gt; void;
-&nbsp;
-export type GalleryContextType = {
-    images: ImageType[];
-    setImages: (images: ImageType[]) =&gt; void;
-    clearImages: () =&gt; void;
-};
-&nbsp;
-export const GalleryContext = createContext&lt;GalleryContextType&gt;({
-    images: [],
-    setImages: <span class="fstat-no" title="function not covered" >() =</span>&gt; {},
-    clearImages: <span class="fstat-no" title="function not covered" >() =</span>&gt; {},
-});
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->

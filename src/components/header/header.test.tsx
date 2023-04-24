@@ -2,14 +2,22 @@ import { render, screen } from "@testing-library/react";
 import { Header } from "./header";
 
 describe("Header", () => {
-    it("renders properl", () => {
+    it("should render the header", () => {
         render(<Header />);
+
         expect(screen.getByRole("banner")).toBeInTheDocument();
     });
 
-    it("renders the searchbar container with placeholder text", () => {
+    it("should render the logo", () => {
         render(<Header />);
-        const searchbarPlaceholder = screen.getByText("Searchbar");
-        expect(searchbarPlaceholder).toBeInTheDocument();
+
+        const logo = screen.getByAltText("Gallery logo");
+        expect(logo).toBeInTheDocument();
+    });
+
+    it("should render the SearchBar", () => {
+        render(<Header />);
+
+        expect(screen.getByTestId("searchbar")).toBeInTheDocument();
     });
 });

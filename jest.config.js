@@ -7,6 +7,7 @@ module.exports = {
         "^.+\\.tsx?$": "ts-jest",
         "^.+\\.svg$": "<rootDir>/svgTransform.js",
     },
+    transformIgnorePatterns: ["node_modules/(?!(uuid)/)"],
     moduleNameMapper: {
         "\\.(css|less|scss)$": "identity-obj-proxy",
     },
