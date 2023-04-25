@@ -20,6 +20,7 @@
         border: 1px solid #e2e2e2;
         background-color: white;
         margin: 2rem auto;
+        position: relative;
         .laptop .image__icons {
             display: none;
         }
@@ -148,6 +149,14 @@
         grid-gap: 2rem 0.5rem;
         width: 100%;
 
+        .image__details {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding-bottom: 1rem;
+        }
+
         .gallery__image {
             cursor: pointer;
             .mobile {
@@ -155,9 +164,8 @@
             }
         }
     }
+
     .image__container:hover {
-        display: flex;
-        width: fit-content;
         display: flex;
         flex-direction: column;
         background: linear-gradient(
@@ -175,21 +183,35 @@
             }
         }
         .image__button--laptop {
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
             img {
                 border-radius: 100%;
                 filter: brightness(0) invert(1);
+                width: 2.3rem;
+                margin: 0.3rem 0;
             }
             p {
                 color: white;
+                font-family: "Josefin Sans", sans-serif;
+                margin-top: 0.3rem;
             }
         }
         .image__button {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-start;
             img {
                 border-radius: 100%;
                 filter: brightness(0) invert(1);
+                width: 2.3rem;
+                margin: 0.3rem 0;
             }
             p {
                 color: white;
+                font-family: "Josefin Sans", sans-serif;
+                margin-top: 0.3rem;
             }
         }
         .laptop {

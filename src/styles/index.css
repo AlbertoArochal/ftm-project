@@ -19,6 +19,7 @@
   border: 1px solid #e2e2e2;
   background-color: white;
   margin: 2rem auto;
+  position: relative;
 }
 .image__list .gallery__image .laptop .image__icons {
   display: none;
@@ -140,6 +141,13 @@
     grid-gap: 2rem 0.5rem;
     width: 100%;
   }
+  .image__list .image__details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 1rem;
+  }
   .image__list .gallery__image {
     cursor: pointer;
   }
@@ -147,8 +155,6 @@
     display: none;
   }
   .image__container:hover {
-    display: flex;
-    width: fit-content;
     display: flex;
     flex-direction: column;
     background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 100%);
@@ -159,19 +165,37 @@
   .image__container:hover .image__thumbup--liked img {
     filter: invert(87%) sepia(11%) saturate(1390%) hue-rotate(98deg) brightness(240%) contrast(94%);
   }
+  .image__container:hover .image__button--laptop {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
   .image__container:hover .image__button--laptop img {
     border-radius: 100%;
     filter: brightness(0) invert(1);
+    width: 2.3rem;
+    margin: 0.3rem 0;
   }
   .image__container:hover .image__button--laptop p {
     color: white;
+    font-family: "Josefin Sans", sans-serif;
+    margin-top: 0.3rem;
+  }
+  .image__container:hover .image__button {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
   }
   .image__container:hover .image__button img {
     border-radius: 100%;
     filter: brightness(0) invert(1);
+    width: 2.3rem;
+    margin: 0.3rem 0;
   }
   .image__container:hover .image__button p {
     color: white;
+    font-family: "Josefin Sans", sans-serif;
+    margin-top: 0.3rem;
   }
   .image__container:hover .laptop {
     position: absolute;
